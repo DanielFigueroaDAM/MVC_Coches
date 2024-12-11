@@ -158,10 +158,112 @@
 
 ---
 
-### 🎨 **Cambios Realizados:**
-1. **Títulos en negrita y grandes** para resaltar secciones.
-2. Agregué **iconos** temáticos al inicio de cada sección.
-3. Separadores entre secciones con líneas horizontales para mayor claridad.
-4. Texto espaciado para facilitar la lectura.
 
-Espero que esta versión cumpla tus expectativas y sea visualmente atractiva. 😊
+# 🌟 **Guía de Comentarios JavaDocs** 🌟
+
+## 📝 **¿Qué es JavaDoc?**
+JavaDoc es una herramienta utilizada para generar documentación en formato HTML a partir de comentarios especiales en el código fuente de Java. Estos comentarios se escriben usando la sintaxis `/** ... */`.
+
+## 🛠️ **Cómo Escribir Comentarios JavaDoc**
+- **Estructura básica de un comentario JavaDoc**:  
+  ```java
+  /**
+   * Una breve descripción del propósito de la clase, método o atributo.
+   *
+   * Detalles adicionales (opcional) sobre cómo funciona.
+   * @etiqueta Descripción de la etiqueta
+   */
+  ```
+## 📚 **Ejemplos de Uso**
+- **Documentar una Clase**:
+  ```java
+  /**
+   * Esta clase representa un Círculo en un sistema gráfico.
+   * Permite calcular su área y circunferencia.
+   */
+  public class Circulo {
+      // Código de la clase
+  }
+  ```
+- **Documentar un Método**:
+  ```java
+  /**
+   * Calcula el área de un círculo.
+   *
+   * @param radio El radio del círculo (en unidades).
+   * @return El área del círculo (en unidades cuadradas).
+   */
+  public double calcularArea(double radio) {
+      return Math.PI * radio * radio;
+  }
+  ```
+- **Documentar un Atributo**:
+  ```java
+  /**
+   * El radio del círculo en unidades.
+   */
+  private double radio;
+  ```
+- **Documentar un Constructor**:
+  ```java
+  /**
+   * Constructor de la clase Circulo.
+   *
+   * @param radio El radio inicial del círculo.
+   */
+  public Circulo(double radio) {
+      this.radio = radio;
+  }
+  ```
+
+## 🧩 **Etiquetas Comunes en JavaDocs**
+- **@param**: Describe un parámetro de un método o constructor.
+  ```java
+  /**
+   * @param nombre El nombre del usuario.
+   */
+  public void setNombre(String nombre) { }
+  ```
+- **@return**: Describe el valor de retorno de un método.
+  ```java
+  /**
+   * @return El área del círculo.
+   */
+  public double getArea() { 
+      return radio * radio * Math.PI;
+  }
+  ```
+- **@throws**: Describe excepciones que un método puede lanzar.
+  ```java
+  /**
+   * @throws IllegalArgumentException Si el radio es negativo.
+   */
+  public void setRadio(double radio) {
+      if (radio < 0) {
+          throw new IllegalArgumentException("El radio no puede ser negativo");
+      }
+      this.radio = radio;
+  }
+  ```
+- **@deprecated**: Indica que un método o clase ya no debería usarse.
+  ```java
+  /**
+   * @deprecated Usar setNuevoRadio(double) en su lugar.
+   */
+  public void setRadioDeprecado(double radio) {
+      this.radio = radio;
+  }
+  ```
+- **@see**: Agrega una referencia a una clase, método o página relacionada.
+  ```java
+  /**
+   * @see Math#PI
+   */
+  public void ejemplo() {
+      System.out.println("Referencia a Math.PI");
+  }
+  ```
+## 📂 **Generar javadocs desde inteliji**
+![img_1.png](.idea/imagenes/img_1.png)
+
+![img2.png](.idea/imagenes/img2.png)
