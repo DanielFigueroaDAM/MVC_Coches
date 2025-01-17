@@ -1,1 +1,2 @@
-Estapa A
+Etapa A
+Etapa B
