@@ -23,5 +23,5 @@ Crear el diagrama usando ramas y fusiones, trabajando en local.
 ---
 
 ## 🖼️ Resultado
-![Diagrama finalizado](RamasMarge/src/main/java/org/example/diagramaSquax.png)
+![Diagrama finalizado](diagramaSquax.png)
 
