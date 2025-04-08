@@ -8,7 +8,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FuncionesParaTestearTest {
+class
+FuncionesParaTestearTest {
 
     @Test
     @DisplayName("Sumar 3 + 4 = 7")
@@ -57,8 +58,8 @@ class FuncionesParaTestearTest {
 
     @Test
     void esPositivo() {
-        assertTrue(FuncionesParaTestear.esPositivo(4));
-        assertFalse(FuncionesParaTestear.esPositivo(-3));
+        assertTrue(FuncionesParaTestear.esPositivo(1));
+        assertFalse(FuncionesParaTestear.esPositivo(0));
     }
 
     @Test
@@ -124,6 +125,11 @@ class FuncionesParaTestearTest {
     void testSumar(int a, int b, int resultadoEsperado) {
         assertEquals(resultadoEsperado, FuncionesParaTestear.sumar(a, b));
     }
+    //After all-> Se ejecuta después de todos los métodos de prueba en la clase. no deja ejecutarse todos  los que etenb por delante
+
+    //Before all-> Se ejecuta antes de todos los métodos de prueba en la clase.
+    //Before each-> Se ejecuta antes de cada método de prueba. Inicia el estado común para todos los métodos de prueba.(ejemplo iniciar un objetos antes de cada test)
+    //Disabled-> Deshabilita un método de prueba.
 
 
 }
