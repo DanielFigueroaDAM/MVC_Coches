@@ -5,6 +5,7 @@ import java.util.ArrayList;
  */
 public class Model {
     static ArrayList<Coche> parking = new ArrayList<>();
+    private int velocidad=0;
 
     /**
      * Crea un coche y lo mete en el parking
@@ -54,5 +55,9 @@ public class Model {
      */
     public int getVelocidad(String matricula) {
         return getCoche(matricula).velocidad;
+    }
+    public int subirV(String matricula){
+
+
     }
 }

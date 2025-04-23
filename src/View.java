@@ -12,4 +12,11 @@ public class View {
         System.out.println(matricula + ": " + v + "km/hr");
         return true;
     }
+    public void menu(){
+        switch (1){
+            case 1:
+                int volocidadCambiada=recibirAumentoVelocidad(matricula);
+
+        }
+    }
 }

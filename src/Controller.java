@@ -22,6 +22,11 @@ public class Controller {
             System.out.println("Correcto");
         } else {
             System.out.println("Error");
-        } ;
+        }
+
+    }
+    public static int recibirAumentoVelocidad(String matricula){
+        int vAumentada =miModel.subirVelocidad(matricula);
+        return vAumentada;
     }
 }
