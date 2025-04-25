@@ -23,10 +23,26 @@ public class Controller {
         } else {
             System.out.println("Error");
         }
+        // muestra el menu
+        miView.menu();
 
     }
     public static int recibirAumentoVelocidad(String matricula){
-        int vAumentada =miModel.subirVelocidad(matricula);
+        View miView = new View();
+        Model miModel = new Model();
+        int vAumentada =miModel.subirV(matricula);
         return vAumentada;
+    }
+    public static int recibirDisminucionVelocidad(String matricula){
+        View miView = new View();
+        Model miModel = new Model();
+        int vDisminuida =miModel.bajarV(matricula);
+        return vDisminuida;
+    }
+    public static int recibirVelocidad(String matricula){
+        View miView = new View();
+        Model miModel = new Model();
+        int v = miModel.getVelocidad(matricula);
+        return v;
     }
 }

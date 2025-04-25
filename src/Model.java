@@ -57,7 +57,26 @@ public class Model {
         return getCoche(matricula).velocidad;
     }
     public int subirV(String matricula){
-
-
+        Coche aux = getCoche(matricula);
+        if (aux != null) {
+            aux.velocidad += 1;
+            return aux.velocidad;
+        } else {
+            return -1; // coche no encontrado
+        }
+    }
+    /**
+     * Baja la velocidad de un coche
+     * @param matricula
+     * @return
+     */
+    public int bajarV(String matricula){
+        Coche aux = getCoche(matricula);
+        if (aux != null) {
+            aux.velocidad -= 1;
+            return aux.velocidad;
+        } else {
+            return -1; // coche no encontrado
+        }
     }
 }
