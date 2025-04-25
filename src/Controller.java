@@ -31,12 +31,18 @@ public class Controller {
         View miView = new View();
         Model miModel = new Model();
         int vAumentada =miModel.subirV(matricula);
+        if(vAumentada ==-1) {
+            throw new NullPointerException("El coche no existe");
+        }
         return vAumentada;
     }
     public static int recibirDisminucionVelocidad(String matricula){
         View miView = new View();
         Model miModel = new Model();
         int vDisminuida =miModel.bajarV(matricula);
+        if(vDisminuida ==-1) {
+            throw new NullPointerException("El coche no existe");
+        }
         return vDisminuida;
     }
     public static int recibirVelocidad(String matricula){
