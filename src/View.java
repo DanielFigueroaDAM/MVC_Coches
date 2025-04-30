@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Clase encargada de la interacción con el usuario
  */
 public class View {
-    Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
     /**
      * Muestra la velocidad de un coche
      * @param matricula del coche
