@@ -1,5 +1,3 @@
-import java.lang.module.ModuleDescriptor;
-
 public class Controller {
     public static void Controler() {
 
@@ -22,7 +20,7 @@ public class Controller {
             System.out.println("Error");
         }
         // muestra el menu
-        View.menu();
+        View.menuVelocidad();
 
     }
     public static int recibirAumentoVelocidad(String matricula){
@@ -42,5 +40,9 @@ public class Controller {
     public static int recibirVelocidad(String matricula){
         int v = Model.getVelocidad(matricula);
         return v;
+    }
+    public static Coche recibirCrearCoche(String modelo, String matricula){
+        Coche c = Model.crearCoche(modelo, matricula);
+        return c;
     }
 }

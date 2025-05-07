@@ -13,11 +13,7 @@ public class Model {
      * @param matricula identificador unico
      * @return el coche creado
      */
-    public static Coche crearCoche(String modelo, String matricula){
-        Coche aux = new Coche(modelo, matricula);
-        parking.add(aux);
-        return aux;
-    }
+
 
     /**
      * Busca coche segun matricula
@@ -78,5 +74,11 @@ public class Model {
         } else {
             return -1; // coche no encontrado
         }
+    }
+    //crear coche static
+    public static Coche crearCoche(String modelo, String matricula) {
+        Coche c = new Coche(modelo, matricula);
+        parking.add(c);
+        return c;
     }
 }

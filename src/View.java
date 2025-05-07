@@ -15,9 +15,35 @@ public class View {
         System.out.println(matricula + ": " + v + "km/hr");
         return true;
     }
-    public static void menu(){
+    public static void menuCrearCoche(){
+        int salida=0;
+        do{
+            System.out.println("1. Crear coche");
+            System.out.println("2. Salir");
+            System.out.println("Elige una opción: ");
+            salida = sc.nextInt();
+            switch (salida){
+                case 1:
+                    System.out.println("Dime el modelo del coche: ");
+                    String modelo = sc.nextLine();
+                    sc.nextLine(); // Consumir el salto de línea
+                    System.out.println("Dime la matricula del coche: ");
+                    String matricula = sc.nextLine();
+                    System.out.println(Controller.recibirCrearCoche(modelo, matricula));
+                    break;
+                case 2:
+                    System.out.println("Salir");
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+                    break;
+            }
+        }while (salida != 2);
+    }
+    public static void menuVelocidad(){
         System.out.println("Dime la matricula del coche: ");
         String matricula = sc.nextLine();
+        sc.nextLine(); // Consumir el salto de línea
         System.out.println("1. Aumentar velocidad");
         System.out.println("2. Disminuir velocidad");
         System.out.println("3. Mostrar velocidad");

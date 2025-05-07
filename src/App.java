@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) {
-        View.menu();
+        View.menuCrearCoche();
+        View.menuVelocidad();
 
     }
 }
