@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Controller {
     public static void Controler() {
 
@@ -44,5 +46,9 @@ public class Controller {
     public static Coche recibirCrearCoche(String modelo, String matricula){
         Coche c = Model.crearCoche(modelo, matricula);
         return c;
+    }
+    public static ArrayList<Coche> recibirParking(){
+        ArrayList<Coche> parking = Model.getParking();
+        return parking;
     }
 }

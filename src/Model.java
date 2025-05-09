@@ -81,4 +81,11 @@ public class Model {
         parking.add(c);
         return c;
     }
+    /**
+     * Devuelve el parking
+     * @return
+     */
+    public static ArrayList<Coche> getParking() {
+        return parking;
+    }
 }
