@@ -61,7 +61,8 @@ public class View {
                     sc.nextLine(); // Consumir el salto de línea
                     System.out.println("Dime la matricula del coche: ");
                     String matricula = sc.nextLine();
-                    System.out.println(Controller.recibirCrearCoche(modelo, matricula));
+                    Coche c1= Controller.recibirCrearCoche(modelo, matricula);
+                    mostrarCoche(c1);
                     break;
                 case 2:
                     System.out.println("Salir");
@@ -72,6 +73,15 @@ public class View {
             }
         }while (salida != 2);
     }
+
+    private static void mostrarCoche(Coche c1) {
+        if(c1 != null) {
+            System.out.println("Coche creado: " + c1);
+        } else {
+            System.out.println("Error al crear el coche");
+        }
+    }
+
     public static void menuVelocidad() {
         int opcion;
         do {
@@ -109,7 +119,7 @@ public class View {
     public static void mostrarParking(){
         ArrayList<Coche> parking = Controller.recibirParking();
         for (Coche c: parking) {
-            System.out.println(c);
+            mostrarCoche(c);
         }
     }
 
