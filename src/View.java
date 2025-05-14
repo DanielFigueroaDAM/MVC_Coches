@@ -12,6 +12,7 @@ public class View {
         do{
             System.out.println("1. Crear coche");
             System.out.println("2. Mostrar parking");
+            System.out.println("3.Cambiar velocidad");
             System.out.println("3. Salir");
             System.out.println("Elige una opción: ");
             salida = sc.nextInt();
