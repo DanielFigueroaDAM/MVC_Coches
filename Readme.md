@@ -34,4 +34,5 @@ sequenceDiagram
     deactivate Controller
     View->>View: Muestra velocidad (System.out)
     deactivate View
+    
 ```
