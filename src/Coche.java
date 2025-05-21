@@ -3,12 +3,23 @@ public class Coche {
     String modelo;
     Integer velocidad;
 
+    /**
+     * Constructor de la clase Coche
+     * @param modelo
+     * @param matricula
+     */
     public Coche(String modelo, String matricula) {
         this.modelo = modelo;
         this.matricula = matricula;
         this.velocidad = 0;
     }
 
+
+    /**
+     * Devuelve la información del coche
+     * @return String con la información del coche
+     * @author Daniel Figueroa
+     */
     @Override
     public String toString() {
         return "Coche{" +

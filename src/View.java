@@ -12,7 +12,6 @@ public class View {
      * @author Daniel Figueroa
      * @version 1.0
      */
-
     public static void menuPrincipal(){
         int salida=0;
         do{
