@@ -18,6 +18,7 @@ public class Model {
     /**
      * Busca coche segun matricula
      * @param matricula a buscar
+     * @author Daniel Figueroa
      * @return chche o null si no existe
      */
     public static Coche getCoche(String matricula){
@@ -35,6 +36,7 @@ public class Model {
      * Cambia la velocidad de un coche
      * @param matricula
      * @param v nueva velocidad
+     * @author Daniel Figueroa
      * @return velocidad modificada
      */
     public static int cambiarVelocidad(String matricula, Integer v) {
@@ -47,6 +49,7 @@ public class Model {
     /**
      * Ddevuelve la velocidad segun la matricula
      * @param matricula
+     * @author Daniel Figueroa
      * @return
      */
     public static int getVelocidad(String matricula) {
@@ -64,6 +67,7 @@ public class Model {
     /**
      * Baja la velocidad de un coche
      * @param matricula
+     * @author Daniel Figueroa
      * @return
      */
     public static int bajarV(String matricula){
@@ -75,7 +79,13 @@ public class Model {
             return -1; // coche no encontrado
         }
     }
-    //crear coche static
+    /**
+     * Crea un coche y lo añade al parking
+     * @param modelo del coche
+     * @param matricula identificador unico
+     * @author Daniel Figueroa
+     * @return el coche creado
+     */
     public static Coche crearCoche(String modelo, String matricula) {
         Coche c = new Coche(modelo, matricula);
         parking.add(c);
