@@ -13,7 +13,6 @@ sequenceDiagram
     activate Controller
     Controller->>Model: crearCoche(modelo, matricula)
     activate Model
-    Note right of Model: Crea nuevo coche\nlo añade al parking
     Model-->>Controller: Coche c
     deactivate Model
     Controller-->>View: Coche c
@@ -29,7 +28,6 @@ sequenceDiagram
     activate Controller
     Controller->>Model: getVelocidad(matricula)
     activate Model
-    Note right of Model: Busca coche\npor matrícula
     Model-->>Controller: int velocidad
     deactivate Model
     Controller-->>View: v
