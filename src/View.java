@@ -7,6 +7,12 @@ import java.util.Scanner;
 public class View {
     public static Scanner sc = new Scanner(System.in);
 
+    /**
+     * Muestra el menú principal y gestiona la interacción con el usuario
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
+
     public static void menuPrincipal(){
         int salida=0;
         do{
@@ -46,6 +52,11 @@ public class View {
         System.out.println(matricula + ": " + v + "km/hr");
         return true;
     }
+    /**
+     * Muestra el menú para crear un coche
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
     public static void menuCrearCoche(){
         int salida=0;
         do{
@@ -73,6 +84,10 @@ public class View {
             }
         }while (salida != 2);
     }
+    /**
+     * Muestra un coche
+     * @param c1 coche a mostrar
+     */
 
     private static void mostrarCoche(Coche c1) {
         if(c1 != null) {
@@ -81,7 +96,11 @@ public class View {
             System.out.println("Error al crear el coche");
         }
     }
-
+    /**
+     * Muestra el menú para cambiar la velocidad de un coche
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
     public static void menuVelocidad() {
         int opcion;
         do {
@@ -116,6 +135,11 @@ public class View {
             }
         } while (opcion != 4);
     }
+    /**
+     * Muestra el parking
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
     public static void mostrarParking(){
         ArrayList<Coche> parking = Controller.recibirParking();
         for (Coche c: parking) {
