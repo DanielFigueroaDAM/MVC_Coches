@@ -1,26 +1,39 @@
 ```mermaid
 sequenceDiagram
-%%  PARTICIPANTES
     participant App
     participant View
     participant Controller
     participant Model
 
-%% 1️⃣  CREAR COCHE
-    App ->> View: solicita creación de coche (modelo, matrícula)
-    View ->> Controller: recibirCrearCoche(modelo, matrícula)
-    Controller ->> Model: crearCoche(modelo, matrícula)
-    Model -->> Controller: objeto Coche
-    Controller -->> View: objeto Coche
-    View -->> App: muestraCoche(Coche)
+%% Flujo para crear coche
+    App->>View: menuPrincipal()
+    activate View
+    View->>View: menuCrearCoche()
+    View->>Controller: recibirCrearCoche(modelo, matricula)
+    activate Controller
+    Controller->>Model: crearCoche(modelo, matricula)
+    activate Model
+    Note right of Model: Crea nuevo coche\nlo añade al parking
+    Model-->>Controller: Coche c
+    deactivate Model
+    Controller-->>View: Coche c
+    deactivate Controller
+    View->>View: mostrarCoche(c)
+    deactivate View
 
-%% 2️⃣  CONSULTAR VELOCIDAD
-    App ->> View: solicita velocidad (matrícula)
-    View ->> Controller: recibirVelocidad(matrícula)
-    Controller ->> Model: getVelocidad(matrícula)
-    Model -->> Controller: velocidad (int)
-    Controller -->> View: velocidad (int)
-    View -->> App: muestraVelocidad(matrícula, velocidad)
-
-    
+%% Flujo para obtener velocidad
+    App->>View: menuPrincipal()
+    activate View
+    View->>View: menuVelocidad()
+    View->>Controller: recibirVelocidad(matricula)
+    activate Controller
+    Controller->>Model: getVelocidad(matricula)
+    activate Model
+    Note right of Model: Busca coche\npor matrícula
+    Model-->>Controller: int velocidad
+    deactivate Model
+    Controller-->>View: v
+    deactivate Controller
+    View->>View: Muestra velocidad (System.out)
+    deactivate View
 ```
