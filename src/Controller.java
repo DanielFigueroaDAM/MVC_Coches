@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 
 public class Controller {
+    /**
+     * Controlador de la aplicación
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
     public static void Controler() {
 
 
@@ -25,6 +30,12 @@ public class Controller {
         View.menuVelocidad();
 
     }
+    /**
+     * Recibe la velocidad de un coche
+     * @author Daniel Figueroa
+     * @param matricula del coche
+     * @return velocidad del coche
+     */
     public static int recibirAumentoVelocidad(String matricula){
         int vAumentada =Model.subirV(matricula);
         if(vAumentada ==-1) {
@@ -32,6 +43,12 @@ public class Controller {
         }
         return vAumentada;
     }
+    /**
+     * Recibe la disminucion de velocidad de un coche
+     * @author Daniel Figueroa
+     * @param matricula del coche
+     * @return velocidad del coche
+     */
     public static int recibirDisminucionVelocidad(String matricula){
         int vDisminuida =Model.bajarV(matricula);
         if(vDisminuida ==-1) {
@@ -39,14 +56,32 @@ public class Controller {
         }
         return vDisminuida;
     }
+    /**
+     * Recibe la velocidad de un coche
+     * @author Daniel Figueroa
+     * @param matricula del coche
+     * @return velocidad del coche
+     */
     public static int recibirVelocidad(String matricula){
         int v = Model.getVelocidad(matricula);
         return v;
     }
+    /**
+     * Recibe la creación de un coche
+     * @author Daniel Figueroa
+     * @param modelo del coche
+     * @param matricula del coche
+     * @return coche creado
+     */
     public static Coche recibirCrearCoche(String modelo, String matricula){
         Coche c = Model.crearCoche(modelo, matricula);
         return c;
     }
+    /**
+     * Recibe el parking, es decir, la lista de coches que es un ArrayList
+     * @author Daniel Figueroa
+     * @return parking
+     */
     public static ArrayList<Coche> recibirParking(){
         ArrayList<Coche> parking = Model.getParking();
         return parking;
