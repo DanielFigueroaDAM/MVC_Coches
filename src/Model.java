@@ -93,6 +93,7 @@ public class Model {
     }
     /**
      * Devuelve el parking
+     * @author Daniel Figueroa
      * @return
      */
     public static ArrayList<Coche> getParking() {
