@@ -18,7 +18,9 @@ public class View {
             System.out.println("1. Crear coche");
             System.out.println("2. Mostrar parking");
             System.out.println("3.Cambiar velocidad");
-            System.out.println("3. Salir");
+            System.out.println("4. Avanzar metros");
+
+            System.out.println("6. Salir");
             System.out.println("Elige una opción: ");
             salida = sc.nextInt();
             sc.nextLine(); // Consumir el salto de línea
@@ -32,7 +34,7 @@ public class View {
                 case 3:
                     menuVelocidad();
                     break;
-                case 4:
+                case 6:
                     System.out.println("Salir");
                     break;
                 default:
