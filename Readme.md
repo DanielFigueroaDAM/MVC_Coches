@@ -1,3 +1,11 @@
+**No me dio tiempo de hacer los setters y getters de los atributos de la clase Coche.**
+**En las nuevas funcionalidades no tuve en cuenta la velocidad del coche, pero sería lo mas lógico.**
+
+
+
+
+
+
 ```mermaid
 sequenceDiagram
     participant App

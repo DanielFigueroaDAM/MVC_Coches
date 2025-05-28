@@ -99,7 +99,44 @@ public class Model {
     public static ArrayList<Coche> getParking() {
         return parking;
     }
+    /**
+     * Rellena el deposito de un coche
+     * @param matricula del coche
+     * @param litros a rellenar
+     * @return litros rellenados
+     * @author Daniel Figueroa
+     */
 
     public static double rellenar(String matricula, double litros) {
+        Coche aux = getCoche(matricula);
+        double gasolinaActual = aux.gasolina;
+        gasolinaActual = gasolinaActual + litros;
+        aux.gasolina = gasolinaActual;
+        return gasolinaActual;
+    }
+    /**
+     * Avanza un coche una distancia determinada
+     * @param matricula del coche
+     * @param metros a avanzar
+     * @return mensaje de resultado
+     * @author Daniel Figueroa
+     */
+
+    public static String avanzar(String matricula, int metros) {
+        Coche aux = getCoche(matricula);
+        int metrosActuales = aux.metros;
+        double gasolinaActual = aux.gasolina;
+        if(gasolinaActual == 0) {
+            return "No hay gasolina suficiente para avanzar";
+        }
+        double consumidos = metros * 0.1; // 0.1 litros por metro
+        gasolinaActual -= consumidos;
+        if( gasolinaActual < 0) {
+            return "No hay gasolina suficiente para avanzar esa distancia";
+        }
+        aux.gasolina = gasolinaActual;
+        metrosActuales += metros;
+        aux.metros = metrosActuales;
+        return "El coche ha avanzado " + metros + " metros. Gasolina restante: " + gasolinaActual + " litros.";
     }
 }
