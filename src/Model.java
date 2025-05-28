@@ -99,4 +99,7 @@ public class Model {
     public static ArrayList<Coche> getParking() {
         return parking;
     }
+
+    public static double rellenar(String matricula, double litros) {
+    }
 }

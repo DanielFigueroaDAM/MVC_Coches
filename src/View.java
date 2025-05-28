@@ -19,7 +19,7 @@ public class View {
             System.out.println("2. Mostrar parking");
             System.out.println("3.Cambiar velocidad");
             System.out.println("4. Avanzar metros");
-
+            System.out.println("5. Rellenar deposito");
             System.out.println("6. Salir");
             System.out.println("Elige una opción: ");
             salida = sc.nextInt();
@@ -33,6 +33,12 @@ public class View {
                     break;
                 case 3:
                     menuVelocidad();
+                    break;
+                case 4:
+                    menuAvanzar();
+                    break;
+                case 5:
+                    menuRellenar();
                     break;
                 case 6:
                     System.out.println("Salir");
@@ -147,5 +153,35 @@ public class View {
             mostrarCoche(c);
         }
     }
+    /**
+     * Muestra el menú para avanzar metros
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
+    public static void menuAvanzar() {
+        System.out.println("Dime la matricula del coche: ");
+        String matricula = sc.nextLine();
+        sc.nextLine(); // Consumir el salto de línea
+        System.out.println("Dime los metros que quieres avanzar: ");
+        int metros = sc.nextInt();
+        sc.nextLine(); // Consumir el salto de línea
+        String resultado = Controller.recibirDistanciaAvanzada(matricula, metros);
+    }
+    /**
+     * Muestra el menú para rellenar el depósito
+     * @author Daniel Figueroa
+     * @version 1.0
+     */
+    public static void menuRellenar() {
+        System.out.println("Dime la matricula del coche: ");
+        String matricula = sc.nextLine();
+        sc.nextLine(); // Consumir el salto de línea
+        System.out.println("Dime los litros que quieres rellenar: ");
+        double litros = sc.nextDouble();
+        double litrosTotales = Controller.recibirReposicion(matricula, litros);
+        System.out.println(" Litros totales en el depósito: " + litrosTotales);
+    }
+
+
 
 }
