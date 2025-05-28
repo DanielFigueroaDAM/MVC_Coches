@@ -1,5 +1,7 @@
 **No me dio tiempo de hacer los setters y getters de los atributos de la clase Coche.**
 **En las nuevas funcionalidades no tuve en cuenta la velocidad del coche, pero sería lo mas lógico.**
+**La funcionalidad de avazar retorna un string con el mensaje de que el coche avanza o no, puede que no sea lo mas correcto podría retornar el objeto entero o la distancia total como en el otro metodo**
+**No me dio tiempo a explicar mas detalladamente como abordé el problema** 
 
 
 
