@@ -139,4 +139,12 @@ public class Model {
         aux.metros = metrosActuales;
         return "El coche ha avanzado " + metros + " metros. Gasolina restante: " + gasolinaActual + " litros.";
     }
+    /**
+     * Notifica a los observadores
+     * Se ejecutara el método update() de cada observador
+     * @param coche
+     */
+    public static void notifyObservers(Coche coche) {
+        ObserverGasolina.update(coche);
+    }
 }
