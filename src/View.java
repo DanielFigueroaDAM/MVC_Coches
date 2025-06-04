@@ -181,6 +181,16 @@ public class View {
         double litrosTotales = Controller.recibirReposicion(matricula, litros);
         System.out.println(" Litros totales en el depósito: " + litrosTotales);
     }
+    /**
+     * Muestra una alarma de infracción
+     * @param matricula del coche
+     * @param velocidad del coche
+     */
+    public static boolean alarmaInfraccion(String matricula) {
+        System.out.println("ALERTA: repostar gasolina de coche: " + matricula);
+        return true;
+    }
+
 
 
 

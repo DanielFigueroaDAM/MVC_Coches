@@ -3,7 +3,7 @@ public class Coche {
     String modelo;
     Integer velocidad;
     Integer metros= 0;
-    Double gasolina= 0.0;
+    Double gasolina= 15.0;
 
     /**
      * Constructor de la clase Coche
