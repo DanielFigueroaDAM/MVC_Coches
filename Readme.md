@@ -1,3 +1,56 @@
+
+# Prueba de que funciona la alerta del observer
+![muestraObserver.png](muestraObserver.png)
+
+# Mermaid del observer
+```mermaid
+sequenceDiagram
+    participant View
+    box gray Controlador
+    participant Controller
+    participant ObserverGasolina
+    end
+    participant Model
+
+    Controller->>Model: avanzar()
+    activate Model
+    Model->>ObserverGasolina: update()
+    deactivate Model
+    activate ObserverGasolina
+    ObserverGasolina->>View: alarmaGasolinaBaja()
+    deactivate ObserverGasolina
+    activate View
+    View->>View: sout()
+    deactivate View
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **No me dio tiempo de hacer los setters y getters de los atributos de la clase Coche.**
 **En las nuevas funcionalidades no tuve en cuenta la velocidad del coche, pero sería lo mas lógico.**
 **La funcionalidad de avazar retorna un string con el mensaje de que el coche avanza o no, puede que no sea lo mas correcto podría retornar el objeto entero o la distancia total como en el otro metodo**
