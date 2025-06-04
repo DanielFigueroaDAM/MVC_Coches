@@ -47,7 +47,7 @@ public class View {
                     System.out.println("Opción no válida");
                     break;
             }
-        }while (salida != 4);
+        }while (salida != 6);
     }
     /**
      * Muestra la velocidad de un coche
@@ -186,7 +186,7 @@ public class View {
      * @param matricula del coche
      * @param velocidad del coche
      */
-    public static boolean alarmaInfraccion(String matricula) {
+    public static boolean alarmaGasolinaBaja(String matricula) {
         System.out.println("ALERTA: repostar gasolina de coche: " + matricula);
         return true;
     }
