@@ -8,7 +8,7 @@ public class ObserverGasolina {
         // verificamos si el nivel de gasolina es bajo
         if (coche.gasolina < LIMITE) {
             // avisamos de una alerta de gasolina baja
-            View.alarmaGasolinaBaja(coche.matricula);
+            View.alarmaGasolinaBaja(coche.matricula, coche.gasolina);
         }
     }
 }
