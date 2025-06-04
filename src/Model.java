@@ -112,6 +112,8 @@ public class Model {
         double gasolinaActual = aux.gasolina;
         gasolinaActual = gasolinaActual + litros;
         aux.gasolina = gasolinaActual;
+        // Notificar a los observadores que la gasolina ha cambiado, pasando el coche
+        notifyObservers(aux);
         return gasolinaActual;
     }
     /**
@@ -137,6 +139,8 @@ public class Model {
         aux.gasolina = gasolinaActual;
         metrosActuales += metros;
         aux.metros = metrosActuales;
+        // Notificar a los observadores que la gasolina ha cambiado, pasando el coche
+        notifyObservers(aux);
         return "El coche ha avanzado " + metros + " metros. Gasolina restante: " + gasolinaActual + " litros.";
     }
     /**

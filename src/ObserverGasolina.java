@@ -10,5 +10,5 @@ public class ObserverGasolina {
             // avisamos de una alerta de gasolina baja
             View.alarmaGasolinaBaja(coche.matricula, coche.gasolina);
         }
-
+    }
 }
