@@ -146,6 +146,7 @@ public class Model {
     /**
      * Notifica a los observadores
      * Se ejecutara el método update() de cada observador
+     * @author Daniel Figueroa
      * @param coche
      */
     public static void notifyObservers(Coche coche) {

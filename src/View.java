@@ -185,6 +185,7 @@ public class View {
      * Muestra una alarma de infracción
      * @param matricula del coche
      * @param velocidad del coche
+     * @author Daniel Figueroa
      */
     public static boolean alarmaGasolinaBaja(String matricula, double gasolina) {
         System.out.println("ALERTA: repostar gasolina de coche: " + matricula+ " con " + gasolina + " litros de gasolina");
